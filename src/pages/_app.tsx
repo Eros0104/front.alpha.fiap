@@ -1,12 +1,20 @@
 import React from 'react';
-import '../../styles/globals.css';
+import GlobalStyles from 'src/styles/global';
 import type { AppProps } from 'next/app';
-import MUITheme from 'src/styles/materialTheme';
-import { ThemeProvider } from '@material-ui/core/styles';
+import MUITheme from 'src/styles/materialUITheme';
+import Theme from 'src/styles/theme';
+import { ThemeProvider } from 'styled-components';
+import { ThemeProvider as MUIThemeProvider } from '@material-ui/core/styles';
+import { Header, Footer } from 'src/components';
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => (
-  <ThemeProvider theme={MUITheme}>
-    <Component {...pageProps} />;
+  <ThemeProvider theme={Theme}>
+    <MUIThemeProvider theme={MUITheme}>
+      <Header />
+      <Component {...pageProps} />
+      <Footer />
+      <GlobalStyles />
+    </MUIThemeProvider>
   </ThemeProvider>
 );
 export default MyApp;
