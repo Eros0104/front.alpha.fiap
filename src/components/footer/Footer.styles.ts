@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
-const Footer = styled.footer``;
-
-export default Footer;
+export const FooterContainer = styled.footer`
+  background-color: ${({ theme }) => theme.colors.primary};
+`;

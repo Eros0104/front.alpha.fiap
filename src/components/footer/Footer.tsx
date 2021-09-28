@@ -1,5 +1,5 @@
 import React from 'react';
-import FooterContainer from './Footer.styles';
+import { FooterContainer } from './Footer.styles';
 
 interface Props {}
 
