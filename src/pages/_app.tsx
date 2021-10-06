@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import GlobalStyles from 'src/styles/global';
 import type { AppProps } from 'next/app';
