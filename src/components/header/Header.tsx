@@ -1,13 +1,25 @@
-import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
+import React, { useEffect, useState } from 'react';
 import { HeaderContainer, Logo } from './Header.styles';
 
 interface Props {}
 
 const Header: React.FC<Props> = props => {
+  const [scrollTop, setScrollTop] = useState(0);
+  const [oldScrollTop, setOldScrollTop] = useState(0);
+  const [isHidden, setIsHidden] = useState(false);
+
+  useEffect(() => {
+    setOldScrollTop(scrollTop);
+    const onScroll = e => {
+      setScrollTop(e.target.documentElement.scrollTop);
+    };
+    window.addEventListener('scroll', onScroll);
+    setIsHidden(oldScrollTop < scrollTop);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [scrollTop]);
+
   return (
-    <HeaderContainer>
+    <HeaderContainer isHidden={isHidden}>
       <Logo src="alpha-dark.png" />
     </HeaderContainer>
   );

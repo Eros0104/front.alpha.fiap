@@ -1,10 +1,15 @@
 import React from 'react';
-import { StyledFooter } from './Footer.styles';
+import { StyledFooter, ArrowIcon } from './Footer.styles';
 
-interface Props {}
-
-const Footer: React.FC<Props> = props => {
-  return <StyledFooter>Footer</StyledFooter>;
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 };
+
+const Footer: React.FC = ({ children }) => (
+  <StyledFooter>
+    <ArrowIcon onClick={scrollToTop} fontSize="large" />
+    {children}
+  </StyledFooter>
+);
 
 export default Footer;

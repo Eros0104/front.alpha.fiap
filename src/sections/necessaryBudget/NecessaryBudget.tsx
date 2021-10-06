@@ -18,18 +18,15 @@ const FinancialFeedback: React.FC = () => {
     setQuantity(newValue);
   };
   return (
-    <BasicSectionTemplate title="Potencial de Retorno Financeiro">
+    <BasicSectionTemplate title="Investimento Necessário">
       <Spacer margin="50px 0">
         <Grid container>
-          <Grid xs={12} md={6} item>
-            <Image src={FinanceImage} alt="" />
-          </Grid>
           <Grid xs={12} md={6} item>
             <Grid container>
               <Grid item xs={12}>
                 <Slider
                   aria-label="Temperature"
-                  defaultValue={1000}
+                  defaultValue={1}
                   valueLabelDisplay="auto"
                   onChange={handleSlider}
                   step={1000}
@@ -73,6 +70,9 @@ const FinancialFeedback: React.FC = () => {
                 </Grid>
               </Grid>
             </Grid>
+          </Grid>
+          <Grid xs={12} md={6} item>
+            <Image src={FinanceImage} alt="" />
           </Grid>
         </Grid>
       </Spacer>
