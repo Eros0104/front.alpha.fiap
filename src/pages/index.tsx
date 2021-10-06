@@ -6,7 +6,9 @@ import {
   BannerTemplate,
   ChartSectionTemplate,
 } from 'src/templates';
-import { Grid, Cover, Typography, Box } from 'src/components';
+import { FinancialFeedback } from 'src/sections';
+import { Grid, Typography, Box, Image, Divider } from 'src/components';
+import FinanceImage from 'public/images/finance.svg';
 
 import { loremIpsum } from 'lorem-ipsum';
 
@@ -48,7 +50,9 @@ const Home: NextPage = () => {
         </Grid>
       </BasicSectionTemplate>
 
-      <ChartSectionTemplate title="Biodigestor vs Placa solar" />
+      <ChartSectionTemplate title="Biodigestor vs Placa Solar" />
+
+      <FinancialFeedback />
 
       <CoverTemplate>
         <Typography align="justify">{loremIpsum({ count: 5 })}</Typography>

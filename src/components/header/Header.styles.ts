@@ -14,5 +14,5 @@ export const HeaderContainer = styled.header`
 `;
 
 export const Logo = styled.img`
-  margin: 10px;
+  margin: 10px auto;
 `;

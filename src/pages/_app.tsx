@@ -6,12 +6,15 @@ import Theme from 'src/styles/theme';
 import { ThemeProvider } from 'styled-components';
 import { ThemeProvider as MUIThemeProvider } from '@material-ui/core/styles';
 import { Header, Footer } from 'src/components';
+import Container from '@material-ui/core/Container';
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => (
   <ThemeProvider theme={Theme}>
     <MUIThemeProvider theme={MUITheme}>
       <Header />
-      <Component {...pageProps} />
+      <Container>
+        <Component {...pageProps} />
+      </Container>
       <Footer />
       <GlobalStyles />
     </MUIThemeProvider>

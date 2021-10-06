@@ -1,6 +1,7 @@
 import React from 'react';
 import { Typography, Box } from 'src/components';
 import { Line } from 'react-chartjs-2';
+import { BasicSectionTemplate } from 'src/templates';
 import { loremIpsum } from 'lorem-ipsum';
 
 interface Props {
@@ -20,11 +21,10 @@ const data = {
 };
 const SectionTemplate: React.FC<Props> = ({ children, title }) => {
   return (
-    <Box my={5}>
-      <Typography variant="h1">{title}</Typography>
+    <BasicSectionTemplate title={title}>
       {children}
       <Line data={data} />
-    </Box>
+    </BasicSectionTemplate>
   );
 };
 

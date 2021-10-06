@@ -4,3 +4,7 @@ export { default as Cover } from './cover/Cover';
 export { default as Typography } from '@material-ui/core/Typography';
 export { default as Grid } from '@material-ui/core/Grid';
 export { default as Box } from '@material-ui/core/Box';
+export { default as Divider } from '@material-ui/core/Divider';
+export { default as Image } from 'next/image';
+export { default as Slider } from '@material-ui/core/Slider';
+export { default as Spacer } from './spacer/Spacer';

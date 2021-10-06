@@ -1,10 +1,10 @@
 import React from 'react';
-import { FooterContainer } from './Footer.styles';
+import { StyledFooter } from './Footer.styles';
 
 interface Props {}
 
 const Footer: React.FC<Props> = props => {
-  return <FooterContainer>Footer</FooterContainer>;
+  return <StyledFooter>Footer</StyledFooter>;
 };
 
 export default Footer;
