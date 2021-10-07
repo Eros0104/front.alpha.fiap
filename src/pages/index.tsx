@@ -69,7 +69,7 @@ const Home: NextPage = () => (
       <NecessaryBudget />
     </Container>
     <CoverTemplate>
-      <Typography align="justify">{loremIpsum({ count: 5 })}</Typography>
+      <Typography align="justify">Text</Typography>
     </CoverTemplate>
   </div>
 );
