@@ -1,15 +1,18 @@
 export default {
   colors: {
     primary: '#F94804',
+    darkFont: '#000000',
+    lightFont: '#ffffff',
     background: '#ffffff',
+    secondaryBackground: '#efefef',
   },
   fontSizes: {
-    xs: '1rem',
-    sm: '1.2rem',
-    md: '1.6rem',
-    lg: '2.4rem',
-    xl: '3.2rem',
-    xxl: '4rem',
+    xs: '0.75rem',
+    sm: '1rem',
+    md: '1.333rem',
+    lg: '1.777rem',
+    xl: '2.369rem',
+    xxl: '3.157rem',
   },
   global: {
     desktopFontSize: '10px',

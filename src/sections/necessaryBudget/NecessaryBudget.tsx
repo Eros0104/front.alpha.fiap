@@ -5,77 +5,81 @@ import {
   Typography,
   Image,
   Divider,
-  Slider,
+  Select,
   Spacer,
+  Box,
 } from 'src/components';
 import FinanceImage from 'public/images/finance.svg';
 
-const FinancialFeedback: React.FC = () => {
-  const [quantity, setQuantity] = useState(1000);
+const projectCost = () => {
+  const map = {
+    1000: 'teste',
+    2000: 'teste',
+  };
+};
 
-  const handleSlider = (event: ChangeEvent<any>, value: number | number[]) => {
-    const newValue = Array.isArray(value) ? 1000 : value;
-    setQuantity(newValue);
+const selectItens = [
+  {
+    value: 1000,
+    text: '1.000 litros',
+  },
+  {
+    value: 2000,
+    text: '2.000 litros',
+  },
+  {
+    value: 10000,
+    text: '10.000 litros',
+  },
+];
+
+const FinancialFeedback: React.FC = () => {
+  const [selectedBiodigestor, setSelectedBiodigestor] = useState(1000);
+
+  const handleChange = (value: any) => {
+    setSelectedBiodigestor(value);
   };
   return (
     <BasicSectionTemplate title="Investimento Necessário">
-      <Spacer margin="50px 0">
-        <Grid container>
-          <Grid xs={12} md={6} item>
-            <Grid container>
-              <Grid item xs={12}>
-                <Slider
-                  aria-label="Temperature"
-                  defaultValue={1}
-                  valueLabelDisplay="auto"
-                  onChange={handleSlider}
-                  step={1000}
-                  marks
-                  min={1000}
-                  max={10000}
-                />
-                <Spacer margin="30px 0">
-                  <Typography variant="h4" align="center">
-                    Biodigestor(es) de{' '}
-                    <Typography variant="h4" component="span" color="primary">
-                      {quantity} L
-                    </Typography>
-                  </Typography>
-                  <Typography variant="h6" align="center">
-                    Quantidade de resíduos orgânicos diária:{' '}
-                    {((quantity / 1000) * 28.6).toFixed(2)} kg
-                  </Typography>
-                </Spacer>
-                <Divider />
-              </Grid>
-              <Grid item xs={12}>
-                <Grid container>
-                  <Grid item xs={5}>
-                    <Typography variant="h6" align="center">
-                      Energia Elétrica
-                    </Typography>
-                    <Typography variant="h6" align="center">
-                      Produção estimada de{' '}
-                      {((quantity / 1000) * 205.48).toFixed(2)} kWh/mês
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={2}>
-                    <Typography variant="h6" align="center">
-                      e
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={5}>
-                    <Typography>Biofertilizante</Typography>
-                  </Grid>
-                </Grid>
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid xs={12} md={6} item>
-            <Image src={FinanceImage} alt="" />
-          </Grid>
-        </Grid>
-      </Spacer>
+      <Select
+        value={selectedBiodigestor}
+        label="Biodigestores"
+        onChange={evt => handleChange(evt.target.value)}
+        itens={selectItens}
+      />
+      <Typography element="h3" fontWeight={900}>
+        Custo do Projeto
+      </Typography>
+      <Typography fontSize="lg" color="primary">
+        R$ 10
+      </Typography>
+      <Typography element="h3" fontWeight={900}>
+        Prazo para Elaboração do Projeto
+      </Typography>
+      <Typography fontSize="lg" color="primary">
+        R$ 10
+      </Typography>
+      <Typography element="h3" fontWeight={900}>
+        Estimativa de Custo da Implementação do Biodigestor
+      </Typography>
+      <Typography fontSize="lg" color="primary">
+        R$ 10
+      </Typography>
+      <Box my={5}>
+        <Typography
+          color="primary"
+          fontSize="sm"
+          align="center"
+          fontWeight={700}
+        >
+          Observação:{' '}
+          <Typography element="span" color="darkFont" fontSize="sm">
+            a estimativa de custos não considera o custo da mão de obra, e do
+            gerador de energia pois são fatores que podem variar constantemente
+          </Typography>
+        </Typography>
+      </Box>
+      <Divider />
     </BasicSectionTemplate>
   );
 };

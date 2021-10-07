@@ -1,6 +1,5 @@
 import React from 'react';
 import { Typography, Grid, Box, Spacer } from 'src/components';
-import { loremIpsum } from 'lorem-ipsum';
 
 interface Props {
   title: string;
@@ -18,15 +17,17 @@ const SplitTitle = (title: string) => {
 const OurSolutionSection: React.FC<Props> = ({ title, children }) => {
   const splittedTitle = SplitTitle(title);
   return (
-    <Spacer margin="50px 0">
-      <Typography variant="h2" component="h1">
-        {splittedTitle.newTitle}{' '}
-        <Typography color="primary" variant="h2" component="span">
-          {splittedTitle.lastWord}
+    <Box my={8}>
+      <Box mb={5}>
+        <Typography element="h1" fontSize="xl" fontWeight={700}>
+          {splittedTitle.newTitle}{' '}
+          <Typography color="primary" fontSize="xl" element="span">
+            {splittedTitle.lastWord}
+          </Typography>
         </Typography>
-      </Typography>
+      </Box>
       {children}
-    </Spacer>
+    </Box>
   );
 };
 

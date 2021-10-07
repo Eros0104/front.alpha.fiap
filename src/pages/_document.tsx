@@ -10,18 +10,21 @@ import Document, {
   NextScript,
 } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import { ServerStyleSheets as MaterialUIServerStyleSheet } from '@material-ui/core/styles';
 
 export default class MyDocument extends Document {
   static async getInitialProps(
     ctx: DocumentContext,
   ): Promise<DocumentInitialProps> {
     const sheet = new ServerStyleSheet();
+    const materialUISheet = new MaterialUIServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
 
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: App => props => sheet.collectStyles(<App {...props} />),
+          enhanceApp: App => props =>
+            sheet.collectStyles(materialUISheet.collect(<App {...props} />)),
         });
 
       const initialProps = await Document.getInitialProps(ctx);
@@ -30,6 +33,7 @@ export default class MyDocument extends Document {
         styles: (
           <>
             {initialProps.styles}
+            {materialUISheet.getStyleElement()}
             {sheet.getStyleElement()}
           </>
         ),
@@ -44,6 +48,10 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
           <meta charSet="utf-8" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter&display=optional"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />

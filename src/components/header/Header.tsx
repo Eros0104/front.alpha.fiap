@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { HeaderContainer, Logo } from './Header.styles';
 
-interface Props {}
-
-const Header: React.FC<Props> = props => {
+const Header: React.FC = () => {
   const [scrollTop, setScrollTop] = useState(0);
   const [oldScrollTop, setOldScrollTop] = useState(0);
   const [isHidden, setIsHidden] = useState(false);
 
   useEffect(() => {
     setOldScrollTop(scrollTop);
-    const onScroll = e => {
+    const onScroll = (e: any) => {
       setScrollTop(e.target.documentElement.scrollTop);
     };
     window.addEventListener('scroll', onScroll);
