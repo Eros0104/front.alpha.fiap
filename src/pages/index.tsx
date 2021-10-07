@@ -6,7 +6,11 @@ import {
   CoverTemplate,
   ChartSectionTemplate,
 } from 'src/templates';
-import { FinancialFeedback, NecessaryBudget } from 'src/sections';
+import {
+  FinancialFeedback,
+  NecessaryBudget,
+  ProjectEcology,
+} from 'src/sections';
 import {
   Grid,
   Typography,
@@ -14,16 +18,49 @@ import {
   Divider,
   Container,
   Cover,
+  Image,
+  Button,
 } from 'src/components';
+import EcoImage from 'public/images/eco.png';
+import Biodigestor from 'public/images/biodigestor.jpg';
+import Biodigestor2 from 'public/images/biodigestor2.jpg';
+import Biodigestor3 from 'public/images/biodigestor3.jpg';
 
 const Home: NextPage = () => (
   <div>
     <Cover src="background.png" height="500px">
       <Container>
         <Box paddingTop="100px">
-          <Typography element="h1" color="lightFont" fontSize="xxl">
-            Lorem
+          <Typography
+            fontWeight={900}
+            element="h1"
+            color="lightFont"
+            fontSize="xxl"
+          >
+            CHALLENGE EDP:
           </Typography>
+          <Typography
+            element="h1"
+            fontWeight={700}
+            color="lightFont"
+            fontSize="xl"
+          >
+            JABAETÉ
+          </Typography>
+          <Typography
+            element="h1"
+            fontWeight={700}
+            color="lightFont"
+            fontSize="lg"
+            upperCase
+          >
+            Uma solução ecológica e econômica
+          </Typography>
+          <Box mt={3}>
+            <Button size="large" variant="outlined" color="primary">
+              Saiba mais
+            </Button>
+          </Box>
         </Box>
       </Container>
     </Cover>
@@ -60,10 +97,50 @@ const Home: NextPage = () => (
             </Box>
           </Grid>
         </Grid>
+        <Box my={5}>
+          <Typography upperCase element="h2" fontWeight={600} fontSize="lg">
+            Componentes do Projeto
+          </Typography>
+          <Grid container>
+            <Grid item xs={12} md={5}>
+              <Grid container>
+                <Grid item xs={12}>
+                  <Box my={10}>
+                    <Image src={Biodigestor} />
+                  </Box>
+                </Grid>
+                <Grid item xs={12}>
+                  <Box my={5}>
+                    <Image src={Biodigestor3} />
+                  </Box>
+                </Grid>
+              </Grid>
+            </Grid>
+            <Grid item xs={12} md={7}>
+              <Image src={Biodigestor2} />
+            </Grid>
+          </Grid>
+        </Box>
+        <Box my={5}>
+          <Typography upperCase element="h2" fontWeight={600} fontSize="lg">
+            Beneficíos e Vantages
+          </Typography>
+          <Grid container>
+            <Grid xs={12} sm={6} item>
+              tetes
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <Image src={EcoImage} />
+            </Grid>
+          </Grid>
+        </Box>
+        <ul>
+          <li />
+        </ul>
       </BasicSectionTemplate>
 
       <ChartSectionTemplate title="Biodigestor vs Placa Solar" />
-
+      <ProjectEcology />
       <FinancialFeedback />
       <Divider />
       <NecessaryBudget />

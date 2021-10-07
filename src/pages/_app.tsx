@@ -19,14 +19,13 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <ThemeProvider theme={Theme}>
       <MUIThemeProvider theme={MUITheme}>
-        <Header />
-        <button onClick={openMenu}>abrir</button>
+        <Header onClickMenu={openMenu} />
         <Component {...pageProps} />
         <Footer>
           <Typography>&copy; Alpha</Typography>
         </Footer>
         <Drawer open={isMenuOpen} onClose={closeMenu} anchor="left">
-          teste
+          test
         </Drawer>
         <GlobalStyles />
       </MUIThemeProvider>

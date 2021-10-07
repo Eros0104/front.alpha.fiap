@@ -17,9 +17,9 @@ const SplitTitle = (title: string) => {
 const OurSolutionSection: React.FC<Props> = ({ title, children }) => {
   const splittedTitle = SplitTitle(title);
   return (
-    <Box my={8}>
+    <Box mt={10} mb={20}>
       <Box mb={5}>
-        <Typography element="h1" fontSize="xl" fontWeight={700}>
+        <Typography upperCase element="h1" fontSize="xl" fontWeight={900}>
           {splittedTitle.newTitle}{' '}
           <Typography color="primary" fontSize="xl" element="span">
             {splittedTitle.lastWord}

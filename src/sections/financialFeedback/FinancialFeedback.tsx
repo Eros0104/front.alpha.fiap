@@ -97,13 +97,23 @@ const FinancialFeedback: React.FC = () => {
                       </Typography>
                       <Typography element="h6" align="center">
                         Produção estimada de{' '}
-                        <Typography element="p" fontWeight={600} align="center">
+                        <Typography
+                          element="p"
+                          color="primary"
+                          fontWeight={600}
+                          align="center"
+                        >
                           {quantity / 1000} m³/mês
                         </Typography>
                         <Typography element="p" align="center">
                           ou
                         </Typography>
-                        <Typography element="p" fontWeight={600} align="center">
+                        <Typography
+                          element="p"
+                          color="primary"
+                          fontWeight={600}
+                          align="center"
+                        >
                           {quantity} m³/mês
                         </Typography>
                       </Typography>

@@ -1,7 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { HeaderContainer, Logo } from './Header.styles';
+import MenuIcon from '@material-ui/icons/Menu';
+import { IconButton } from 'src/components';
+import {
+  StyledHeader,
+  Logo,
+  ButtonContainer,
+  HeaderContainer,
+} from './Header.styles';
 
-const Header: React.FC = () => {
+interface Props {
+  onClickMenu: () => void;
+}
+
+const Header: React.FC<Props> = ({ onClickMenu }) => {
   const [scrollTop, setScrollTop] = useState(0);
   const [oldScrollTop, setOldScrollTop] = useState(0);
   const [isHidden, setIsHidden] = useState(false);
@@ -17,9 +28,16 @@ const Header: React.FC = () => {
   }, [scrollTop]);
 
   return (
-    <HeaderContainer isHidden={isHidden}>
-      <Logo src="alpha-dark.png" />
-    </HeaderContainer>
+    <StyledHeader isHidden={isHidden}>
+      <HeaderContainer>
+        <ButtonContainer>
+          <IconButton onClick={onClickMenu}>
+            <MenuIcon fontSize="large" />
+          </IconButton>
+        </ButtonContainer>
+        <Logo src="alpha-dark.png" />
+      </HeaderContainer>
+    </StyledHeader>
   );
 };
 

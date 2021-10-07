@@ -7,6 +7,7 @@ interface TypographyProps {
   fontWeight?: 100 | 300 | 400 | 500 | 700 | 600 | 900;
   lineHeight?: string | number;
   align?: 'center' | 'left' | 'right' | 'justify';
+  upperCase?: boolean;
 }
 
 const Typography = styled('p').attrs<TypographyProps>(({ element }) => ({
@@ -18,12 +19,14 @@ const Typography = styled('p').attrs<TypographyProps>(({ element }) => ({
     lineHeight = 1.5,
     fontSize = 'md',
     align = 'left',
+    upperCase = false,
   }) => css`
     font-size: ${({ theme }) => theme.fontSizes[fontSize]};
     color: ${({ theme }) => theme.colors[color]};
     font-weight: ${fontWeight};
     line-height: ${lineHeight};
     text-align: ${align};
+    ${upperCase && 'text-transform: uppercase;'}
   `}
 `;
 

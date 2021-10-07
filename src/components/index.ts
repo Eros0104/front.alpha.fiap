@@ -1,4 +1,5 @@
 export { default as Box } from '@material-ui/core/Box';
+export { default as Button } from '@material-ui/core/Button';
 export { default as Container } from './container/Container';
 export { default as Cover } from './cover/Cover';
 export { default as Divider } from '@material-ui/core/Divider';
@@ -7,6 +8,7 @@ export { default as Footer } from './footer/Footer';
 export { default as Grid } from '@material-ui/core/Grid';
 export { default as Header } from './header/Header';
 export { default as Icon } from '@material-ui/core/Icon';
+export { default as IconButton } from '@material-ui/core/IconButton';
 export { default as Image } from 'next/image';
 export { default as Select } from './select/Select';
 export { default as Slider } from '@material-ui/core/Slider';
