@@ -73,7 +73,10 @@ const Home: NextPage = () => (
     </Cover>
     <Container>
       <OurSolution />
-      <ChartSectionTemplate title="Biodigestor vs Placa Solar" />
+      <ChartSectionTemplate
+        id="chart-section"
+        title="Biodigestor vs Placa Solar"
+      />
       <ProjectEcology />
       <FinancialFeedback />
       <NecessaryBudget />

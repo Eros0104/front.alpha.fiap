@@ -5,7 +5,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
 interface Itens {
-  value: any;
+  value: string | number;
   text: string;
 }
 
@@ -16,7 +16,7 @@ interface Props {
     child: React.ReactNode,
   ) => void;
   itens: Itens[];
-  value: any;
+  value: string | number;
 }
 
 const renderItens = (itens: Itens[]) =>

@@ -10,8 +10,16 @@ interface BiodigestorBudget {
   implementationCost: number;
 }
 
-const getProject = (id: any): BiodigestorBudget => {
-  const map = {
+interface MapProject {
+  [key: number]: {
+    projectCost: number;
+    deadline: number;
+    implementationCost: number;
+  };
+}
+
+const getProject = (id: number): BiodigestorBudget => {
+  const map: MapProject = {
     1000: {
       projectCost: 3926,
       deadline: 50,
@@ -28,7 +36,8 @@ const getProject = (id: any): BiodigestorBudget => {
       implementationCost: 47696.26,
     },
   };
-  return map[id];
+  // eslint-disable-next-line no-prototype-builtins
+  return map.hasOwnProperty(id) ? map[id] : map[1000];
 };
 
 const selectItens = [
@@ -52,7 +61,7 @@ const FinancialFeedback: React.FC = () => {
   );
   const [selectValue, setSelectValue] = useState(1000);
 
-  const handleChange = (value: any) => {
+  const handleChange = (value: number) => {
     setSelectedBiodigestor(getProject(value));
     setSelectValue(value);
   };
@@ -63,7 +72,11 @@ const FinancialFeedback: React.FC = () => {
           <Select
             value={selectValue}
             label="Biodigestores"
-            onChange={evt => handleChange(evt.target.value)}
+            onChange={({ target }) =>
+              handleChange(
+                typeof target.value === 'number' ? target.value : 1000,
+              )
+            }
             itens={selectItens}
           />
         </Grid>
