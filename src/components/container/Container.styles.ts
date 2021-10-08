@@ -3,6 +3,6 @@ import styled from 'styled-components';
 
 export const StyledContainer = styled.div`
   max-width: 1280px;
-  margin: 0 auto;
+  margin: 10px auto;
   padding: 0 50px;
 `;

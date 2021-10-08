@@ -1,21 +1,34 @@
 import React, { ChangeEvent, useState } from 'react';
 import { BasicSectionTemplate } from 'src/templates';
-import {
-  Grid,
-  Typography,
-  Image,
-  Divider,
-  Select,
-  Spacer,
-  Box,
-} from 'src/components';
+import { Grid, Typography, Image, Select, Spacer, Box } from 'src/components';
 import FinanceImage from 'public/images/finance.svg';
+import { convertToBRL } from 'src/functions';
 
-const projectCost = () => {
+interface BiodigestorBudget {
+  projectCost: number;
+  deadline: number;
+  implementationCost: number;
+}
+
+const getProject = (id: any): BiodigestorBudget => {
   const map = {
-    1000: 'teste',
-    2000: 'teste',
+    1000: {
+      projectCost: 3926,
+      deadline: 50,
+      implementationCost: 43908.22,
+    },
+    2000: {
+      projectCost: 4147,
+      deadline: 50,
+      implementationCost: 44329.44,
+    },
+    10000: {
+      projectCost: 4589,
+      deadline: 50,
+      implementationCost: 47696.26,
+    },
   };
+  return map[id];
 };
 
 const selectItens = [
@@ -34,36 +47,47 @@ const selectItens = [
 ];
 
 const FinancialFeedback: React.FC = () => {
-  const [selectedBiodigestor, setSelectedBiodigestor] = useState(1000);
+  const [selectedBiodigestor, setSelectedBiodigestor] = useState(
+    getProject(1000),
+  );
+  const [selectValue, setSelectValue] = useState(1000);
 
   const handleChange = (value: any) => {
-    setSelectedBiodigestor(value);
+    setSelectedBiodigestor(getProject(value));
+    setSelectValue(value);
   };
   return (
-    <BasicSectionTemplate title="Investimento Necessário">
+    <BasicSectionTemplate id="necessary-budget" title="Investimento Necessário">
       <Select
-        value={selectedBiodigestor}
+        value={selectValue}
         label="Biodigestores"
         onChange={evt => handleChange(evt.target.value)}
         itens={selectItens}
       />
-      <Typography element="h3" fontWeight={900}>
-        Custo do Projeto
-      </Typography>
-      <Typography fontSize="lg" color="primary">
-        R$ 10
-      </Typography>
-      <Typography element="h3" fontWeight={900}>
-        Prazo para Elaboração do Projeto
-      </Typography>
-      <Typography fontSize="lg" color="primary">
-        R$ 10
-      </Typography>
+      <Box mb={3}>
+        <Typography element="h3" fontWeight={900}>
+          Custo do Projeto
+        </Typography>
+        <Typography fontSize="lg" color="primary">
+          {convertToBRL(selectedBiodigestor.projectCost)}
+        </Typography>
+      </Box>
+      <Box mb={3}>
+        <Typography element="h3" fontWeight={900}>
+          Prazo para Elaboração do Projeto
+        </Typography>
+        <Typography fontSize="lg" color="primary">
+          {selectedBiodigestor.deadline}{' '}
+          <Typography element="span" fontSize="lg" color="darkFont">
+            dias úteis
+          </Typography>
+        </Typography>
+      </Box>
       <Typography element="h3" fontWeight={900}>
         Estimativa de Custo da Implementação do Biodigestor
       </Typography>
       <Typography fontSize="lg" color="primary">
-        R$ 10
+        {convertToBRL(selectedBiodigestor.implementationCost)}
       </Typography>
       <Box my={5}>
         <Typography
@@ -79,7 +103,6 @@ const FinancialFeedback: React.FC = () => {
           </Typography>
         </Typography>
       </Box>
-      <Divider />
     </BasicSectionTemplate>
   );
 };

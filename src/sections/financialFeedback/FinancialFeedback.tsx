@@ -19,7 +19,10 @@ const FinancialFeedback: React.FC = () => {
     setQuantity(newValue);
   };
   return (
-    <BasicSectionTemplate title="Potencial de Retorno Financeiro">
+    <BasicSectionTemplate
+      id="financial-feedback"
+      title="Potencial de Retorno Financeiro"
+    >
       <Spacer margin="50px 0">
         <Grid container>
           <Grid xs={12} md={6} item>

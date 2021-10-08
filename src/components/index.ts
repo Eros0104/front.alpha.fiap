@@ -10,6 +10,7 @@ export { default as Header } from './header/Header';
 export { default as Icon } from '@material-ui/core/Icon';
 export { default as IconButton } from '@material-ui/core/IconButton';
 export { default as Image } from 'next/image';
+export { default as Menu } from './menu/Menu';
 export { default as Select } from './select/Select';
 export { default as Slider } from '@material-ui/core/Slider';
 export { default as Spacer } from './spacer/Spacer';

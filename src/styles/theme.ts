@@ -5,6 +5,7 @@ export default {
     lightFont: '#ffffff',
     background: '#ffffff',
     secondaryBackground: '#efefef',
+    darkBackground: '#000',
   },
   fontSizes: {
     xs: '0.75rem',

@@ -1,8 +1,11 @@
 import React from 'react';
-import { Typography, Grid, Box, Spacer } from 'src/components';
+import { Typography, Box, Divider } from 'src/components';
 
 interface Props {
   title: string;
+  alignTitle?: 'left' | 'right' | 'center';
+  id: string;
+  subTitle?: string;
 }
 
 const SplitTitle = (title: string) => {
@@ -14,19 +17,35 @@ const SplitTitle = (title: string) => {
   return { lastWord, newTitle };
 };
 
-const OurSolutionSection: React.FC<Props> = ({ title, children }) => {
+const OurSolutionSection: React.FC<Props> = ({
+  title,
+  children,
+  alignTitle,
+  id,
+  subTitle,
+}) => {
   const splittedTitle = SplitTitle(title);
   return (
-    <Box mt={10} mb={20}>
+    <Box pt={8} id={id}>
       <Box mb={5}>
-        <Typography upperCase element="h1" fontSize="xl" fontWeight={900}>
+        <Typography
+          upperCase
+          element="h1"
+          align={alignTitle}
+          fontSize="xl"
+          fontWeight={900}
+        >
           {splittedTitle.newTitle}{' '}
           <Typography color="primary" fontSize="xl" element="span">
             {splittedTitle.lastWord}
           </Typography>
         </Typography>
+        {subTitle && <Typography upperCase>{subTitle}</Typography>}
       </Box>
       {children}
+      <Box mt={4}>
+        <Divider />
+      </Box>
     </Box>
   );
 };

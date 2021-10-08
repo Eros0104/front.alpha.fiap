@@ -1,15 +1,24 @@
 import React from 'react';
-import { Image, StyleProps } from './Cover.styles';
+import {
+  Image,
+  StyleProps,
+  HoverImage,
+  ChildrenContainer,
+} from './Cover.styles';
 
-type Props = StyleProps;
+interface Props extends StyleProps {
+  hoverSrc: string;
+}
 
 const Cover: React.FC<Props> = ({
   src,
+  hoverSrc,
   height = 'calc(100vh - 80px)',
   children,
 }) => (
   <Image src={src} height={height}>
-    {children}
+    <ChildrenContainer>{children}</ChildrenContainer>
+    <HoverImage hoverSrc={hoverSrc} />
   </Image>
 );
 
