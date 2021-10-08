@@ -5,6 +5,7 @@ import { BasicSectionTemplate } from 'src/templates';
 
 interface Props {
   title: string;
+  id: string;
 }
 const data = {
   labels: ['1', '2', '3', '4', '5', '6'],
@@ -18,8 +19,8 @@ const data = {
     },
   ],
 };
-const SectionTemplate: React.FC<Props> = ({ children, title }) => (
-  <BasicSectionTemplate title={title}>
+const SectionTemplate: React.FC<Props> = ({ children, title, id }) => (
+  <BasicSectionTemplate id={id} title={title}>
     {children}
     <Line data={data} />
   </BasicSectionTemplate>

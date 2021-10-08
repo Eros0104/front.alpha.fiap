@@ -3,6 +3,7 @@ import { BasicSectionTemplate } from 'src/templates';
 import { Grid, Typography, Image, Select, Spacer, Box } from 'src/components';
 import FinanceImage from 'public/images/finance.svg';
 import { convertToBRL } from 'src/functions';
+import { MapSharp } from '@material-ui/icons';
 
 interface BiodigestorBudget {
   projectCost: number;
@@ -10,8 +11,16 @@ interface BiodigestorBudget {
   implementationCost: number;
 }
 
+interface MapProject {
+  [key: number]: {
+    projectCost: number;
+    deadline: number;
+    implementationCost: number;
+  };
+}
+
 const getProject = (id: number): BiodigestorBudget => {
-  const map = {
+  const map: MapProject = {
     1000: {
       projectCost: 3926,
       deadline: 50,
@@ -28,7 +37,8 @@ const getProject = (id: number): BiodigestorBudget => {
       implementationCost: 47696.26,
     },
   };
-  return map[id];
+  // eslint-disable-next-line no-prototype-builtins
+  return map.hasOwnProperty(id) ? map[id] : map[1000];
 };
 
 const selectItens = [
@@ -61,7 +71,9 @@ const FinancialFeedback: React.FC = () => {
       <Select
         value={selectValue}
         label="Biodigestores"
-        onChange={evt => handleChange(evt.target.value)}
+        onChange={({ target }) =>
+          handleChange(typeof target.value === 'number' ? target.value : 1000)
+        }
         itens={selectItens}
       />
       <Box mb={3}>

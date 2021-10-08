@@ -14,7 +14,7 @@ import FinanceImage from 'public/images/finance.svg';
 const FinancialFeedback: React.FC = () => {
   const [quantity, setQuantity] = useState(1000);
 
-  const handleSlider = (event: ChangeEvent, value: number | number[]) => {
+  const handleSlider = (event: ChangeEvent<any>, value: number | number[]) => {
     const newValue = Array.isArray(value) ? 1000 : value;
     setQuantity(newValue);
   };

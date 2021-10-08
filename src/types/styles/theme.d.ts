@@ -1,4 +1,4 @@
-import theme from 'src/styles/themes/default';
+import theme from 'src/styles/theme';
 
 export type ThemeFontSizes = typeof theme.fontSizes;
 

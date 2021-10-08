@@ -15,7 +15,7 @@ const Typography = styled('p').attrs<TypographyProps>(({ element }) => ({
   as: element,
 }))<TypographyProps>`
   ${({
-    color = 'text',
+    color = 'darkFont',
     fontWeight = 400,
     lineHeight = 1.5,
     fontSize = 'md',
