@@ -10,7 +10,7 @@ interface BiodigestorBudget {
   implementationCost: number;
 }
 
-const getProject = (id: any): BiodigestorBudget => {
+const getProject = (id: number): BiodigestorBudget => {
   const map = {
     1000: {
       projectCost: 3926,
@@ -52,7 +52,7 @@ const FinancialFeedback: React.FC = () => {
   );
   const [selectValue, setSelectValue] = useState(1000);
 
-  const handleChange = (value: any) => {
+  const handleChange = (value: number) => {
     setSelectedBiodigestor(getProject(value));
     setSelectValue(value);
   };
