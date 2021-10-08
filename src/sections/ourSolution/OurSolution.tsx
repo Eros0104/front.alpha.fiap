@@ -9,52 +9,43 @@ import CarbonCredit from 'public/images/carbon-credit.png';
 
 const OurSolution: React.FC = () => (
   <BasicSectionTemplate id="our-solution" title="Nossa Solução">
-    <Grid container>
+    <Grid container spacing={10}>
       <Grid xs={12} md={6} item>
-        <Box mr={5}>
-          <Typography align="justify">
-            O Biodigestor consiste em um reator anaeróbio no qual, na ausência
-            de oxigênio, microorganismos realizam a decomposição de resíduos
-            sólidos como dejetos animais ou restos alimentares, gerando como
-            subprodutos o biogás e o biofertilizante. O biogás tem potencial
-            para geração de calor, e dependendo da quantidade produzida, geração
-            de energia elétrica, enquanto o biofertilizante possui
-            características muito benéficas na aplicação no solo e vegetação,
-            como adubo orgânico.
-          </Typography>
-        </Box>
+        <Typography align="justify">
+          O Biodigestor consiste em um reator anaeróbio no qual, na ausência de
+          oxigênio, microorganismos realizam a decomposição de resíduos sólidos
+          como dejetos animais ou restos alimentares, gerando como subprodutos o
+          biogás e o biofertilizante. O biogás tem potencial para geração de
+          calor, e dependendo da quantidade produzida, geração de energia
+          elétrica, enquanto o biofertilizante possui características muito
+          benéficas na aplicação no solo e vegetação, como adubo orgânico.
+        </Typography>
       </Grid>
       <Grid xs={12} md={6} item>
-        <Box ml={5}>
-          <Typography align="justify">
-            Como todo reator, um biodigestor exige cuidados de implantação e
-            operação, adequando-se a realidade. Assim, faz-se necessário um
-            estudo do local, escolha da tecnologia apropriada e dimensionamento
-            do sistema, de acordo com as características locais e finalidade
-            prevista. O Dimensionamento de Biodigestor tem como finalidade,
-            portanto, projetar a melhor maneira de atender todas as necessidades
-            dos clientes, oferecendo uma solução ambientalmente adequada de
-            disposição de resíduos sólidos orgânicos.
-          </Typography>
-        </Box>
+        <Typography align="justify">
+          Como todo reator, um biodigestor exige cuidados de implantação e
+          operação, adequando-se a realidade. Assim, faz-se necessário um estudo
+          do local, escolha da tecnologia apropriada e dimensionamento do
+          sistema, de acordo com as características locais e finalidade
+          prevista. O Dimensionamento de Biodigestor tem como finalidade,
+          portanto, projetar a melhor maneira de atender todas as necessidades
+          dos clientes, oferecendo uma solução ambientalmente adequada de
+          disposição de resíduos sólidos orgânicos.
+        </Typography>
       </Grid>
     </Grid>
     <Box my={5}>
       <Typography upperCase element="h2" fontWeight={600} fontSize="lg">
         Componentes do Projeto:
       </Typography>
-      <Grid container>
+      <Grid container spacing={5}>
         <Grid item xs={12} md={5}>
           <Grid container>
             <Grid item xs={12}>
-              <Box my={10}>
-                <Image src={Biodigestor} />
-              </Box>
+              <Image src={Biodigestor} />
             </Grid>
             <Grid item xs={12}>
-              <Box my={5}>
-                <Image src={Biodigestor3} />
-              </Box>
+              <Image src={Biodigestor3} />
             </Grid>
           </Grid>
         </Grid>
@@ -124,11 +115,11 @@ const OurSolution: React.FC = () => (
         Crédito de Caborno:
       </Typography>
       <Box pt={5}>
-        <Grid container>
-          <Grid xs={12} md={7}>
+        <Grid container spacing={5}>
+          <Grid xs={12} md={6} lg={7}>
             <Image src={CarbonCredit} />
           </Grid>
-          <Grid item xs={12} md={5}>
+          <Grid item xs={12} md={6} lg={5}>
             <Typography align="justify">
               Créditos de Carbono consiste em um certificado para uma pessoa ou
               empresa, que possui o controle suficiente para reduzir a emissão

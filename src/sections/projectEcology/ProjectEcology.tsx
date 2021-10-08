@@ -9,25 +9,21 @@ const ProjectEcology: React.FC = () => (
     subTitle="Uma escola mais verde"
     title="Projeto Ecology"
   >
-    <Grid container>
+    <Grid container spacing={5}>
       <Grid item xs={12} md={7}>
-        <Box mb={5}>
-          <Image src={ProjectEcologyImage} />
-        </Box>
+        <Image src={ProjectEcologyImage} />
       </Grid>
       <Grid item xs={12} md={5}>
-        <Box mx={5}>
-          <Typography align="justify">
-            Com o líquido fertilizante gerado pelo biodigestor, pretendemos
-            utilizar para um projeto com uma iniciação à agricultura, onde o
-            público-alvo será as crianças da escola, que utilizarão este líquido
-            fertilizante como adubo. Isso trará diversos benefícios: Engajará as
-            crianças a serem mais participativas nas atividades
-            extracurriculares, contudo, crianças engajadas, tendem a estudar
-            mais! Levando à uma maior conscientização da população local quanto
-            a preservação do meio ambiente.
-          </Typography>
-        </Box>
+        <Typography align="justify">
+          Com o líquido fertilizante gerado pelo biodigestor, pretendemos
+          utilizar para um projeto com uma iniciação à agricultura, onde o
+          público-alvo será as crianças da escola, que utilizarão este líquido
+          fertilizante como adubo. Isso trará diversos benefícios: Engajará as
+          crianças a serem mais participativas nas atividades extracurriculares,
+          contudo, crianças engajadas, tendem a estudar mais! Levando à uma
+          maior conscientização da população local quanto a preservação do meio
+          ambiente.
+        </Typography>
       </Grid>
     </Grid>
   </BasicSectionTemplate>

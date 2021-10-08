@@ -58,37 +58,44 @@ const FinancialFeedback: React.FC = () => {
   };
   return (
     <BasicSectionTemplate id="necessary-budget" title="Investimento Necessário">
-      <Select
-        value={selectValue}
-        label="Biodigestores"
-        onChange={evt => handleChange(evt.target.value)}
-        itens={selectItens}
-      />
-      <Box mb={3}>
-        <Typography element="h3" fontWeight={900}>
-          Custo do Projeto
-        </Typography>
-        <Typography fontSize="lg" color="primary">
-          {convertToBRL(selectedBiodigestor.projectCost)}
-        </Typography>
-      </Box>
-      <Box mb={3}>
-        <Typography element="h3" fontWeight={900}>
-          Prazo para Elaboração do Projeto
-        </Typography>
-        <Typography fontSize="lg" color="primary">
-          {selectedBiodigestor.deadline}{' '}
-          <Typography element="span" fontSize="lg" color="darkFont">
-            dias úteis
+      <Grid container>
+        <Grid item xs={12} sm={4}>
+          <Select
+            value={selectValue}
+            label="Biodigestores"
+            onChange={evt => handleChange(evt.target.value)}
+            itens={selectItens}
+          />
+        </Grid>
+        <Grid item xs={12} sm={8}>
+          <Box mb={3}>
+            <Typography element="h3" fontWeight={900}>
+              Custo do Projeto
+            </Typography>
+            <Typography fontSize="lg" color="primary">
+              {convertToBRL(selectedBiodigestor.projectCost)}
+            </Typography>
+          </Box>
+          <Box mb={3}>
+            <Typography element="h3" fontWeight={900}>
+              Prazo para Elaboração do Projeto
+            </Typography>
+            <Typography fontSize="lg" color="primary">
+              {selectedBiodigestor.deadline}{' '}
+              <Typography element="span" fontSize="lg" color="darkFont">
+                dias úteis
+              </Typography>
+            </Typography>
+          </Box>
+          <Typography element="h3" fontWeight={900}>
+            Estimativa de Custo da Implementação do Biodigestor
           </Typography>
-        </Typography>
-      </Box>
-      <Typography element="h3" fontWeight={900}>
-        Estimativa de Custo da Implementação do Biodigestor
-      </Typography>
-      <Typography fontSize="lg" color="primary">
-        {convertToBRL(selectedBiodigestor.implementationCost)}
-      </Typography>
+          <Typography fontSize="lg" color="primary">
+            {convertToBRL(selectedBiodigestor.implementationCost)}
+          </Typography>
+        </Grid>
+      </Grid>
+
       <Box my={5}>
         <Typography
           color="primary"

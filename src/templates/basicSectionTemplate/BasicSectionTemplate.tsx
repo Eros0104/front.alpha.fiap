@@ -36,7 +36,12 @@ const OurSolutionSection: React.FC<Props> = ({
           fontWeight={900}
         >
           {splittedTitle.newTitle}{' '}
-          <Typography color="primary" fontSize="xl" element="span">
+          <Typography
+            fontWeight={100}
+            color="primary"
+            fontSize="xl"
+            element="span"
+          >
             {splittedTitle.lastWord}
           </Typography>
         </Typography>
