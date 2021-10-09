@@ -8,15 +8,11 @@ interface BiodigestorBudget {
   projectCost: number;
   deadline: number;
   implementationCost: number;
+  returnEstimacy: number;
 }
 
 interface MapProject {
-  [key: number]: {
-    projectCost: number;
-    deadline: number;
-    implementationCost: number;
-    returnEstimacy: number;
-  };
+  [key: number]: BiodigestorBudget;
 }
 
 const getProject = (id: number): BiodigestorBudget => {

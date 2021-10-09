@@ -24,7 +24,7 @@ const Menu: React.FC<Props> = ({ open, onClose, items }) => {
   };
 
   const renderMenu = () =>
-    items.map(({ text, id }, index) => (
+    items.map(({ text, id }) => (
       <ListItem button key={text} onClick={() => onScrollTo(id)}>
         <ListItemText primary={text} />
       </ListItem>
