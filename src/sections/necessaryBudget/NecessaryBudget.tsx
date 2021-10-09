@@ -55,7 +55,7 @@ const selectItens = [
   },
 ];
 
-const FinancialFeedback: React.FC = () => {
+const NecessaryBudget: React.FC = () => {
   const [selectedBiodigestor, setSelectedBiodigestor] = useState(
     getProject(1000),
   );
@@ -69,6 +69,9 @@ const FinancialFeedback: React.FC = () => {
     <BasicSectionTemplate id="necessary-budget" title="Investimento Necessário">
       <Grid container>
         <Grid item xs={12} sm={4}>
+          <Typography element="p" fontSize="sm">
+            Selecione um modelo de Biodigestor:
+          </Typography>
           <Select
             value={selectValue}
             label="Biodigestores"
@@ -127,4 +130,4 @@ const FinancialFeedback: React.FC = () => {
   );
 };
 
-export default FinancialFeedback;
+export default NecessaryBudget;

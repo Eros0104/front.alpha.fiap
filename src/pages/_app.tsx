@@ -14,6 +14,10 @@ const items = [
     id: 'our-solution',
   },
   {
+    text: 'Biodigestor VS Placa Solar',
+    id: 'biodigestor-vs-solar',
+  },
+  {
     text: 'Projeto Ecology',
     id: 'project-ecology',
   },

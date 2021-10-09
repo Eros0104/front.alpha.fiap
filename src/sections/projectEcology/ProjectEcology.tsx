@@ -1,6 +1,6 @@
-import React, { ChangeEvent, useState } from 'react';
+import React from 'react';
 import { BasicSectionTemplate } from 'src/templates';
-import { Grid, Typography, Image, Slider, Box } from 'src/components';
+import { Grid, Typography, Image } from 'src/components';
 import ProjectEcologyImage from 'public/images/project-ecology.png';
 
 const ProjectEcology: React.FC = () => (

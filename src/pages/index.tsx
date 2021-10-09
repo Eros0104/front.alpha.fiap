@@ -1,27 +1,13 @@
 import React from 'react';
 import type { NextPage } from 'next';
-import { makeStyles } from '@material-ui/core/styles';
 import {
-  BasicSectionTemplate,
-  CoverTemplate,
-  ChartSectionTemplate,
-} from 'src/templates';
-import {
+  BiodigestorVsSolar,
   FinancialFeedback,
   NecessaryBudget,
-  ProjectEcology,
   OurSolution,
+  ProjectEcology,
 } from 'src/sections';
-import {
-  Grid,
-  Typography,
-  Box,
-  Divider,
-  Container,
-  Cover,
-  Image,
-  Button,
-} from 'src/components';
+import { Typography, Box, Container, Cover, Button } from 'src/components';
 import { scrollTo } from 'src/functions';
 
 const Home: NextPage = () => (
@@ -73,17 +59,11 @@ const Home: NextPage = () => (
     </Cover>
     <Container>
       <OurSolution />
-      <ChartSectionTemplate
-        id="chart-section"
-        title="Biodigestor vs Placa Solar"
-      />
+      <BiodigestorVsSolar />
       <ProjectEcology />
       <FinancialFeedback />
       <NecessaryBudget />
     </Container>
-    <CoverTemplate>
-      <Typography align="justify">Text</Typography>
-    </CoverTemplate>
   </div>
 );
 

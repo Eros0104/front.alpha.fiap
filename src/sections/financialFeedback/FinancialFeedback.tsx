@@ -81,7 +81,7 @@ const FinancialFeedback: React.FC = () => {
                           color="primary"
                           fontWeight={600}
                         >
-                          {((quantity / 1000) * 205.48).toFixed(2)} kWh/mês
+                          {((quantity / 1000) * 102.73).toFixed(2)} kWh/mês
                         </Typography>
                       </Typography>
                     </Box>

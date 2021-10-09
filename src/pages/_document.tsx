@@ -47,6 +47,7 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <title>Alpha</title>
           <meta charSet="utf-8" />
           <link
             href="https://fonts.googleapis.com/css2?family=Inter&display=swap"

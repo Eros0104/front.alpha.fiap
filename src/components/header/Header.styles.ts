@@ -21,10 +21,15 @@ export const ButtonContainer = styled.div`
 
 export const HeaderContainer = styled.div`
   display: flex;
+  position: relative;
   width: 100%;
+  max-width: ${({ theme }) => theme.breakpoints.lg}px;
+  margin: 0 auto;
   justify-content: center;
+  align-items: center;
 `;
 
 export const Logo = styled.img`
-  margin: 7px 0;
+  padding: 5px;
+  height: 100%;
 `;

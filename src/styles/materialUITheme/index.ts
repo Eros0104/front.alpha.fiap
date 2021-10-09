@@ -7,6 +7,9 @@ const MUITheme = createTheme({
       main: Theme.colors.primary,
     },
   },
+  breakpoints: {
+    values: Theme.breakpoints,
+  },
 });
 
 export default MUITheme;
