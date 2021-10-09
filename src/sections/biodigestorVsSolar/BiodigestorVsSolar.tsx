@@ -6,7 +6,7 @@ import Theme from 'src/styles/theme';
 import { SectionProps } from '../section';
 
 const data = {
-  labels: ['100Kw', '200Kw', '1000kw'],
+  labels: ['100Kw', '1000Kw', '2000kw'],
   datasets: [
     {
       label: 'Biogás',

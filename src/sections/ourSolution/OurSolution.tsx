@@ -187,6 +187,22 @@ const OurSolution: React.FC<SectionProps> = ({ id, title }) => (
     <Divider />
     <Box my={5}>
       <Typography upperCase element="h2" fontWeight={600} fontSize="lg">
+        Componentes Elétricos
+      </Typography>
+      <br />
+      <iframe
+        width="100%"
+        height="500"
+        src="https://www.youtube.com/embed/vUAUdPjVJ1k"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
+    </Box>
+    <Divider />
+    <Box my={5}>
+      <Typography upperCase element="h2" fontWeight={600} fontSize="lg">
         Crédito de Caborno:
       </Typography>
       <Box pt={5}>
