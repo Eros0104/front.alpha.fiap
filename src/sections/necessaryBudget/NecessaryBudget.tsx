@@ -15,6 +15,7 @@ interface MapProject {
     projectCost: number;
     deadline: number;
     implementationCost: number;
+    returnEstimacy: number;
   };
 }
 
@@ -23,17 +24,20 @@ const getProject = (id: number): BiodigestorBudget => {
     1000: {
       projectCost: 3926,
       deadline: 50,
-      implementationCost: 43908.22,
+      implementationCost: 73908.22,
+      returnEstimacy: 7,
     },
     2000: {
       projectCost: 4147,
       deadline: 50,
-      implementationCost: 44329.44,
+      implementationCost: 74329.44,
+      returnEstimacy: 5,
     },
     10000: {
       projectCost: 4589,
       deadline: 50,
-      implementationCost: 47696.26,
+      implementationCost: 74890.5,
+      returnEstimacy: 3,
     },
   };
   // eslint-disable-next-line no-prototype-builtins
@@ -112,7 +116,20 @@ const NecessaryBudget: React.FC = () => {
         </Grid>
       </Grid>
 
-      <Box my={5}>
+      <Box mt={5}>
+        <Typography
+          color="primary"
+          fontSize="sm"
+          align="center"
+          fontWeight={700}
+        >
+          Estimativa do retorno de investimento:{' '}
+          <Typography element="span" color="darkFont" fontSize="sm">
+            {selectedBiodigestor.returnEstimacy} anos
+          </Typography>
+        </Typography>
+      </Box>
+      <Box mt={2} mb={5}>
         <Typography
           color="primary"
           fontSize="sm"

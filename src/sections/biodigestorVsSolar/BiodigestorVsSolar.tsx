@@ -15,8 +15,8 @@ const data = {
       borderColor: Theme.colors.primary,
     },
     {
-      label: 'Solar',
-      data: [10000, 20000, 60000],
+      label: 'Placa Solar',
+      data: [20000, 40000, 90000],
       fill: false,
       backgroundColor: '#bababa',
       borderColor: '#bababa',

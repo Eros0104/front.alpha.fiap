@@ -32,7 +32,7 @@ export const Image = styled.div<StyleProps>`
   background-image: url(${({ src }) => src});
 
   :hover ${HoverImage} {
-    opacity: 1;
+    opacity: 0;
   }
 `;
 
