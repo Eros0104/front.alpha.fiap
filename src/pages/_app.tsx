@@ -7,29 +7,7 @@ import Theme from 'src/styles/theme';
 import { ThemeProvider } from 'styled-components';
 import { ThemeProvider as MUIThemeProvider } from '@material-ui/core/styles';
 import { Header, Footer, Typography, Box, Menu } from 'src/components';
-
-const items = [
-  {
-    text: 'Nossa Solução',
-    id: 'our-solution',
-  },
-  {
-    text: 'Biodigestor VS Placa Solar',
-    id: 'biodigestor-vs-solar',
-  },
-  {
-    text: 'Projeto Ecology',
-    id: 'project-ecology',
-  },
-  {
-    text: 'Potencial de Retorno Financeiro',
-    id: 'financial-feedback',
-  },
-  {
-    text: 'Investimento Necessário',
-    id: 'necessary-budget',
-  },
-];
+import menuItems from 'src/sections/menuItems';
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,7 +21,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
     <ThemeProvider theme={Theme}>
       <MUIThemeProvider theme={MUITheme}>
         <Header onClickMenu={openMenu} />
-        <Component {...pageProps} />
+        <Component {...pageProps} sections={menuItems} />
         <Footer>
           <Box my={5}>
             <Typography fontSize="sm" align="center" color="lightFont">
@@ -51,7 +29,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
             </Typography>
           </Box>
         </Footer>
-        <Menu open={isMenuOpen} onClose={closeMenu} items={items} />
+        <Menu open={isMenuOpen} onClose={closeMenu} items={menuItems} />
         <GlobalStyles />
       </MUIThemeProvider>
     </ThemeProvider>

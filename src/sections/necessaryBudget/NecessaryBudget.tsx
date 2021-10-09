@@ -1,8 +1,8 @@
-import React, { ChangeEvent, useState } from 'react';
+import React, { useState } from 'react';
 import { BasicSectionTemplate } from 'src/templates';
-import { Grid, Typography, Image, Select, Spacer, Box } from 'src/components';
-import FinanceImage from 'public/images/finance.svg';
+import { Grid, Typography, Select, Box } from 'src/components';
 import { convertToBRL } from 'src/functions';
+import { SectionProps } from '../section';
 
 interface BiodigestorBudget {
   projectCost: number;
@@ -55,7 +55,7 @@ const selectItens = [
   },
 ];
 
-const NecessaryBudget: React.FC = () => {
+const NecessaryBudget: React.FC<SectionProps> = ({ title, id }) => {
   const [selectedBiodigestor, setSelectedBiodigestor] = useState(
     getProject(1000),
   );
@@ -66,7 +66,7 @@ const NecessaryBudget: React.FC = () => {
     setSelectValue(value);
   };
   return (
-    <BasicSectionTemplate id="necessary-budget" title="Investimento Necessário">
+    <BasicSectionTemplate id={id} title={title}>
       <Grid container>
         <Grid item xs={12} sm={4}>
           <Typography element="p" fontSize="sm">

@@ -10,8 +10,9 @@ import {
   Box,
 } from 'src/components';
 import FinanceImage from 'public/images/finance.svg';
+import { SectionProps } from '../section';
 
-const FinancialFeedback: React.FC = () => {
+const FinancialFeedback: React.FC<SectionProps> = ({ title, id }) => {
   const [quantity, setQuantity] = useState(1000);
 
   const handleSlider = (event: ChangeEvent<any>, value: number | number[]) => {
@@ -19,10 +20,7 @@ const FinancialFeedback: React.FC = () => {
     setQuantity(newValue);
   };
   return (
-    <BasicSectionTemplate
-      id="financial-feedback"
-      title="Potencial de Retorno Financeiro"
-    >
+    <BasicSectionTemplate id={id} title={title}>
       <Spacer margin="50px 0">
         <Grid container>
           <Grid xs={12} md={6} item>

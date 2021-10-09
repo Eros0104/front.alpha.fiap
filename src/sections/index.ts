@@ -3,3 +3,4 @@ export { default as FinancialFeedback } from './financialFeedback/FinancialFeedb
 export { default as NecessaryBudget } from './necessaryBudget/NecessaryBudget';
 export { default as OurSolution } from './ourSolution/OurSolution';
 export { default as ProjectEcology } from './projectEcology/ProjectEcology';
+export { default as PossibleImprovements } from './possibleImprovements/PossibleImprovements';

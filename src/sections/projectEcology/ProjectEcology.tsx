@@ -2,13 +2,10 @@ import React from 'react';
 import { BasicSectionTemplate } from 'src/templates';
 import { Grid, Typography, Image } from 'src/components';
 import ProjectEcologyImage from 'public/images/project-ecology.png';
+import { SectionProps } from '../section';
 
-const ProjectEcology: React.FC = () => (
-  <BasicSectionTemplate
-    id="project-ecology"
-    subTitle="Uma escola mais verde"
-    title="Projeto Ecology"
-  >
+const ProjectEcology: React.FC<SectionProps> = ({ id, title }) => (
+  <BasicSectionTemplate id={id} subTitle="Uma escola mais verde" title={title}>
     <Grid container spacing={5}>
       <Grid item xs={12} md={7}>
         <Image src={ProjectEcologyImage} />

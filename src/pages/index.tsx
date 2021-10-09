@@ -1,12 +1,6 @@
 import React from 'react';
 import type { NextPage } from 'next';
-import {
-  BiodigestorVsSolar,
-  FinancialFeedback,
-  NecessaryBudget,
-  OurSolution,
-  ProjectEcology,
-} from 'src/sections';
+import menuItems from 'src/sections/menuItems';
 import { Typography, Box, Container, Cover, Button } from 'src/components';
 import { scrollTo } from 'src/functions';
 
@@ -58,11 +52,9 @@ const Home: NextPage = () => (
       </Container>
     </Cover>
     <Container>
-      <OurSolution />
-      <BiodigestorVsSolar />
-      <ProjectEcology />
-      <FinancialFeedback />
-      <NecessaryBudget />
+      {menuItems.map(({ Component, id, text }) => (
+        <Component key={id} title={text} id={id} />
+      ))}
     </Container>
   </div>
 );

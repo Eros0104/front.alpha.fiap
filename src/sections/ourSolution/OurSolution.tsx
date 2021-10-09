@@ -11,9 +11,10 @@ import Component2 from 'public/images/component-2.png';
 import Component3 from 'public/images/component-3.png';
 import Component4 from 'public/images/component-4.png';
 import Component5 from 'public/images/component-5.png';
+import { SectionProps } from '../section';
 
-const OurSolution: React.FC = () => (
-  <BasicSectionTemplate id="our-solution" title="Nossa Solução">
+const OurSolution: React.FC<SectionProps> = ({ id, title }) => (
+  <BasicSectionTemplate id={id} title={title}>
     <Grid container spacing={10}>
       <Grid xs={12} md={6} item>
         <Typography align="justify">
