@@ -117,7 +117,7 @@ const FinancialFeedback: React.FC = () => {
                           fontWeight={600}
                           align="center"
                         >
-                          {quantity} m³/mês
+                          {quantity} L/mês
                         </Typography>
                       </Typography>
                     </Box>

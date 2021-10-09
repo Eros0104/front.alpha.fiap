@@ -128,7 +128,7 @@ const OurSolution: React.FC = () => (
               </li>
               <li>
                 <Typography>
-                  Criação iminente de Cŕeditos de Carbono;
+                  Criação iminente de Créditos de Carbono;
                 </Typography>
               </li>
             </ul>
