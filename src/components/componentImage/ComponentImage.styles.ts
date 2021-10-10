@@ -1,16 +1,15 @@
-
 import styled from 'styled-components';
 
 export const StyledContainer = styled.div`
-    position: relative;
+  position: relative;
 `;
 
 export const HoverImage = styled.div`
-    position: absolute;
-    transition: .3s ease;
-    opacity: 0;
+  position: absolute;
+  transition: 0.3s ease;
+  opacity: 0;
 
-    :hover {
-        opacity: 1;
-    }
+  :hover {
+    opacity: 1;
+  }
 `;

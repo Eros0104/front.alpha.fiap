@@ -1,6 +1,6 @@
 export { default as Box } from '@material-ui/core/Box';
 export { default as Button } from '@material-ui/core/Button';
-export { default as ComponentImage} from './componentImage/ComponentImage';
+export { default as ComponentImage } from './componentImage/ComponentImage';
 export { default as Container } from './container/Container';
 export { default as Cover } from './cover/Cover';
 export { default as Divider } from '@material-ui/core/Divider';
