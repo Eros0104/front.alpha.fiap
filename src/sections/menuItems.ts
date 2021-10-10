@@ -5,6 +5,7 @@ import {
   OurSolution,
   PossibleImprovements,
   ProjectEcology,
+  Conclusion,
 } from 'src/sections';
 
 const menuItems = [
@@ -37,6 +38,11 @@ const menuItems = [
     text: 'Possíveis Melhorias',
     id: 'possible-improvements',
     Component: PossibleImprovements,
+  },
+  {
+    text: 'Conclusion',
+    id: 'conclusion',
+    Component: Conclusion,
   },
 ];
 
