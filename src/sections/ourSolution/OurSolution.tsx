@@ -87,7 +87,7 @@ const OurSolution: React.FC<SectionProps> = ({ id, title }) => (
           </Typography>
         </Grid>
         <Grid item xs={6} md={4}>
-          <ComponentImage src={Component3} hoverSrc={Component3} />
+          <ComponentImage src={Component3} hoverSrc={Pressostato} />
           <Typography align="justify">
             Sensor responsável por verificar a pressão dentro do sistema
           </Typography>

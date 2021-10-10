@@ -8,19 +8,17 @@ const PossibleImprovements: React.FC<SectionProps> = ({ title, id }) => (
   <BasicSectionTemplate id={id} title={title}>
     <Grid container spacing={5}>
       <Grid item xs={12} sm={7}>
-        <Typography fontWeight={700} upperCase>
-          Nosso projeto pode se aprimorar mais ainda! No momento, não enviamos
-          informações do Biodigestor para a Internet através do IoT, mas temos
-          uma ideia pronta e com uma topologia desenhada:
-        </Typography>
         <Typography align="justify">
-          São dois biodigestores instalados com monitoramento de pressão e
-          emissão de gás para segurança do ambiente local, também foi incluso
-          sensores de luminosidade e temperatura para envio online das
-          informações através da conexão com a internet. Na solução temos duas
-          placas ESP32 conectadas diretamente aos sensores e encaminhando dados
-          para o Storage Gateway do ambiente da Cloud, essa comunicação passando
-          por um firewall que tem como objetivo bloquear qualquer tipo de acesso
+          Pensamos também em uma possível implementação em nosso projeto, onde
+          podemos aplicar o IoT para sincronizar as informações vindas do nosso
+          sistema de controle para a nuvem (Cloud). Serão dois biodigestores
+          instalados com monitoramento de pressão e emissão de gás para
+          segurança do ambiente local, também foi incluso sensores de
+          luminosidade e temperatura para envio online das informações através
+          da conexão com a internet. Na solução temos duas placas ESP32
+          conectadas diretamente aos sensores e encaminhando dados para o
+          Storage Gateway do ambiente da Cloud, essa comunicação passando por um
+          firewall que tem como objetivo bloquear qualquer tipo de acesso
           externo para rede do Biodigestor. No firewall é somente liberado
           regras de saída para envios dos dados coletado do biodigestor para o
           storage na nuvem.

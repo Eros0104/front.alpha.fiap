@@ -21,19 +21,19 @@ const getProject = (id: number): BiodigestorBudget => {
       projectCost: 3926,
       deadline: 50,
       implementationCost: 73908.22,
-      returnEstimacy: 7,
+      returnEstimacy: 8,
     },
     2000: {
       projectCost: 4147,
       deadline: 50,
       implementationCost: 74329.44,
-      returnEstimacy: 5,
+      returnEstimacy: 6,
     },
     10000: {
       projectCost: 4589,
       deadline: 50,
       implementationCost: 74890.5,
-      returnEstimacy: 3,
+      returnEstimacy: 4,
     },
   };
   // eslint-disable-next-line no-prototype-builtins

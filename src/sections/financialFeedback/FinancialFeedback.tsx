@@ -59,7 +59,7 @@ const FinancialFeedback: React.FC<SectionProps> = ({ title, id }) => {
                   <Typography element="h6" align="center">
                     Quantidade de resíduos orgânicos diária:{' '}
                     <Typography element="span" color="primary" fontWeight={600}>
-                      {((quantity / 1000) * 28.6).toFixed(2)} kg
+                      {((quantity / 1000) * 14.3).toFixed(2)} kg
                     </Typography>
                   </Typography>
                 </Spacer>
@@ -98,17 +98,7 @@ const FinancialFeedback: React.FC<SectionProps> = ({ title, id }) => {
                       </Typography>
                       <Typography element="h6" align="center">
                         Produção estimada de{' '}
-                        <Typography
-                          element="p"
-                          color="primary"
-                          fontWeight={600}
-                          align="center"
-                        >
-                          {quantity / 1000} m³/mês
-                        </Typography>
-                        <Typography element="p" align="center">
-                          ou
-                        </Typography>
+                        <Typography element="p" align="center" />
                         <Typography
                           element="p"
                           color="primary"
@@ -116,6 +106,14 @@ const FinancialFeedback: React.FC<SectionProps> = ({ title, id }) => {
                           align="center"
                         >
                           {quantity} L/mês
+                        </Typography>
+                        <Typography
+                          element="p"
+                          color="primary"
+                          fontWeight={600}
+                          align="center"
+                        >
+                          R$ {(quantity * 5.499).toFixed(2)}/mês
                         </Typography>
                       </Typography>
                     </Box>
