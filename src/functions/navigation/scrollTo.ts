@@ -1,5 +1,8 @@
 const scrollTo = (id: string) => {
-  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView();
+  }
 };
 
 export default scrollTo;

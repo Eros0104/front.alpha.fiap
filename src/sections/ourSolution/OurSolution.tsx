@@ -1,6 +1,13 @@
 import React from 'react';
 import { BasicSectionTemplate } from 'src/templates';
-import { Grid, Typography, Image, Divider, Box, ComponentImage } from 'src/components';
+import {
+  Grid,
+  Typography,
+  Image,
+  Divider,
+  Box,
+  ComponentImage,
+} from 'src/components';
 import EcoImage from 'public/images/eco.svg';
 import Biodigestor2 from 'public/images/biodigestor2.jpg';
 import CarbonCredit from 'public/images/carbon-credit.png';
@@ -11,6 +18,7 @@ import Component2 from 'public/images/component-2.png';
 import Component3 from 'public/images/component-3.png';
 import Component4 from 'public/images/component-4.png';
 import Component5 from 'public/images/component-5.png';
+import Pressostato from 'public/images/pressostato.jpeg';
 import { SectionProps } from '../section';
 
 const OurSolution: React.FC<SectionProps> = ({ id, title }) => (
@@ -18,34 +26,21 @@ const OurSolution: React.FC<SectionProps> = ({ id, title }) => (
     <Grid container spacing={10}>
       <Grid xs={12} md={6} item>
         <Typography align="justify">
-          A motivação para a realização do
-          presente estudo encontra-se na
-          importância do tema sobre
-          eficiência energética e geração de
-          energia na comunidade de
-          Jabaeté. Esta apresentação propõe
-          uma abordagem para diminuir o
-          valor da conta de energia elétrica
-          de uma escola publica da
-          comunidade, através da utilização
-          de biogás, que será gerada a partir
-          de um biodigestor, que por sua vez
-          possuirá um monitoramento
-          remoto em seus indicadores de
-          segurança e performance.
+          A motivação para a realização do presente estudo encontra-se na
+          importância do tema sobre eficiência energética e geração de energia
+          na comunidade de Jabaeté. Esta apresentação propõe uma abordagem para
+          diminuir o valor da conta de energia elétrica de uma escola publica da
+          comunidade, através da utilização de biogás, que será gerada a partir
+          de um biodigestor, que por sua vez possuirá um monitoramento remoto em
+          seus indicadores de segurança e performance.
         </Typography>
       </Grid>
       <Grid xs={12} md={6} item>
         <Typography align="justify">
-          O sistema de biodigestão consiste
-          em um reator anaeróbio no qual, na
-          ausência de oxigênio,
-          microorganismos realizam a
-          decomposição de resíduos sólidos
-          como dejetos animais ou restos
-          alimentares, gerando como
-          subprodutos o biogás e o
-          biofertilizante.
+          O sistema de biodigestão consiste em um reator anaeróbio no qual, na
+          ausência de oxigênio, microorganismos realizam a decomposição de
+          resíduos sólidos como dejetos animais ou restos alimentares, gerando
+          como subprodutos o biogás e o biofertilizante.
         </Typography>
       </Grid>
     </Grid>
@@ -68,7 +63,10 @@ const OurSolution: React.FC<SectionProps> = ({ id, title }) => (
       </Box>
       <Grid container spacing={5}>
         <Grid item xs={6} md={4}>
-          <ComponentImage src={BiodigestorComponent} hoverSrc={Component1} />
+          <ComponentImage
+            src={BiodigestorComponent}
+            hoverSrc={BiodigestorComponent}
+          />
           <Typography align="justify">
             Responsável por realizar o processo de biodigestão da matéria
             orgânica, onde será gerado o gás metano.
@@ -82,26 +80,26 @@ const OurSolution: React.FC<SectionProps> = ({ id, title }) => (
           </Typography>
         </Grid>
         <Grid item xs={6} md={4}>
-          <ComponentImage src={Component2} hoverSrc={Component1} />
+          <ComponentImage src={Component2} hoverSrc={Component2} />
           <Typography align="justify">
             Dispositivo de segurança mecânica responsável em regular a pressão
             máxima no sistema.
           </Typography>
         </Grid>
         <Grid item xs={6} md={4}>
-          <ComponentImage src={Component3} hoverSrc={Component1} />
+          <ComponentImage src={Component3} hoverSrc={Component3} />
           <Typography align="justify">
             Sensor responsável por verificar a pressão dentro do sistema
           </Typography>
         </Grid>
         <Grid item xs={6} md={4}>
-          <ComponentImage src={Component4} hoverSrc={Component1} />
+          <ComponentImage src={Component4} hoverSrc={Component4} />
           <Typography align="justify">
             Responsável pela liberação e fechamento do fluxo de gás no sistema
           </Typography>
         </Grid>
         <Grid item xs={6} md={4}>
-          <ComponentImage src={Component5} hoverSrc={Component1} />
+          <ComponentImage src={Component5} hoverSrc={Component5} />
           <Typography align="justify">
             Utilizada para gerar um curto-circuito controlado, que será
             responsável em ascender a chama
