@@ -1,6 +1,6 @@
 import React from 'react';
 import { BasicSectionTemplate } from 'src/templates';
-import { Grid, Typography, Image } from 'src/components';
+import { Typography } from 'src/components';
 import { SectionProps } from '../section';
 
 const ProjectEcology: React.FC<SectionProps> = ({ id, title }) => (
