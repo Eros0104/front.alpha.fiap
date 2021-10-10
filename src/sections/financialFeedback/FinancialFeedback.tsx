@@ -1,4 +1,5 @@
 import React, { ChangeEvent, useState } from 'react';
+import { convertToBRL } from 'src/functions';
 import { BasicSectionTemplate } from 'src/templates';
 import {
   Grid,
@@ -113,7 +114,7 @@ const FinancialFeedback: React.FC<SectionProps> = ({ title, id }) => {
                           fontWeight={600}
                           align="center"
                         >
-                          R$ {(quantity * 5.499).toFixed(2)}/mês
+                          {convertToBRL(quantity * 5.499)}/mês
                         </Typography>
                       </Typography>
                     </Box>
