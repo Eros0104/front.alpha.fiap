@@ -18,7 +18,12 @@ import Component2 from 'public/images/component-2.png';
 import Component3 from 'public/images/component-3.png';
 import Component4 from 'public/images/component-4.png';
 import Component5 from 'public/images/component-5.png';
-import Pressostato from 'public/images/pressostato.jpeg';
+import Pressostato from 'public/images/real-pressostato.jpeg';
+import Biodigestor from 'public/images/real-biodigestor.jpeg';
+import FiltroIodo from 'public/images/real-filtro-iodo.jpeg';
+import Lampada from 'public/images/real-lampada.jpeg';
+import Solenoide from 'public/images/real-solenoide.jpeg';
+import ValvPressao from 'public/images/real-valv-pressao.jpeg';
 import { SectionProps } from '../section';
 
 const OurSolution: React.FC<SectionProps> = ({ id, title }) => (
@@ -63,24 +68,21 @@ const OurSolution: React.FC<SectionProps> = ({ id, title }) => (
       </Box>
       <Grid container spacing={5}>
         <Grid item xs={6} md={4}>
-          <ComponentImage
-            src={BiodigestorComponent}
-            hoverSrc={BiodigestorComponent}
-          />
+          <ComponentImage src={BiodigestorComponent} hoverSrc={Biodigestor} />
           <Typography align="justify">
             Responsável por realizar o processo de biodigestão da matéria
             orgânica, onde será gerado o gás metano.
           </Typography>
         </Grid>
         <Grid item xs={6} md={4}>
-          <ComponentImage src={Component1} hoverSrc={Component1} />
+          <ComponentImage src={Component1} hoverSrc={FiltroIodo} />
           <Typography align="justify">
             Filtro de Iodo, responsável por realizar limpeza do gás e retirar os
             odores presentes nele
           </Typography>
         </Grid>
         <Grid item xs={6} md={4}>
-          <ComponentImage src={Component2} hoverSrc={Component2} />
+          <ComponentImage src={Component2} hoverSrc={ValvPressao} />
           <Typography align="justify">
             Dispositivo de segurança mecânica responsável em regular a pressão
             máxima no sistema.
@@ -93,17 +95,14 @@ const OurSolution: React.FC<SectionProps> = ({ id, title }) => (
           </Typography>
         </Grid>
         <Grid item xs={6} md={4}>
-          <ComponentImage src={Component4} hoverSrc={Component4} />
+          <ComponentImage src={Component4} hoverSrc={Solenoide} />
           <Typography align="justify">
             Responsável pela liberação e fechamento do fluxo de gás no sistema
           </Typography>
         </Grid>
         <Grid item xs={6} md={4}>
-          <ComponentImage src={Component5} hoverSrc={Component5} />
-          <Typography align="justify">
-            Utilizada para gerar um curto-circuito controlado, que será
-            responsável em ascender a chama
-          </Typography>
+          <ComponentImage src={Component5} hoverSrc={Lampada} />
+          <Typography align="justify">Lâmpada a gás</Typography>
         </Grid>
       </Grid>
     </Box>
