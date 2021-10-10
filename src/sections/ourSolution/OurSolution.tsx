@@ -18,25 +18,34 @@ const OurSolution: React.FC<SectionProps> = ({ id, title }) => (
     <Grid container spacing={10}>
       <Grid xs={12} md={6} item>
         <Typography align="justify">
-          O Biodigestor consiste em um reator anaeróbio no qual, na ausência de
-          oxigênio, microorganismos realizam a decomposição de resíduos sólidos
-          como dejetos animais ou restos alimentares, gerando como subprodutos o
-          biogás e o biofertilizante. O biogás tem potencial para geração de
-          calor, e dependendo da quantidade produzida, geração de energia
-          elétrica, enquanto o biofertilizante possui características muito
-          benéficas na aplicação no solo e vegetação, como adubo orgânico.
+          A motivação para a realização do
+          presente estudo encontra-se na
+          importância do tema sobre
+          eficiência energética e geração de
+          energia na comunidade de
+          Jabaeté. Esta apresentação propõe
+          uma abordagem para diminuir o
+          valor da conta de energia elétrica
+          de uma escola publica da
+          comunidade, através da utilização
+          de biogás, que será gerada a partir
+          de um biodigestor, que por sua vez
+          possuirá um monitoramento
+          remoto em seus indicadores de
+          segurança e performance.
         </Typography>
       </Grid>
       <Grid xs={12} md={6} item>
         <Typography align="justify">
-          Como todo reator, um biodigestor exige cuidados de implantação e
-          operação, adequando-se a realidade. Assim, com a nossa solução, a
-          implementação do biodigestor foi estudada pensando precisamente neste
-          local, bem como a solução do hardware desenvolvido em cima. O
-          Dimensionamento de Biodigestor tem como finalidade, portanto, projetar
-          a melhor maneira de atender todas as necessidades dos clientes,
-          oferecendo uma solução ambientalmente adequada de disposição de
-          resíduos sólidos orgânicos.
+          O sistema de biodigestão consiste
+          em um reator anaeróbio no qual, na
+          ausência de oxigênio,
+          microorganismos realizam a
+          decomposição de resíduos sólidos
+          como dejetos animais ou restos
+          alimentares, gerando como
+          subprodutos o biogás e o
+          biofertilizante.
         </Typography>
       </Grid>
     </Grid>

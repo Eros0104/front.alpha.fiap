@@ -12,14 +12,12 @@ const ProjectEcology: React.FC<SectionProps> = ({ id, title }) => (
       </Grid>
       <Grid item xs={12} md={5}>
         <Typography align="justify">
-          Com o líquido fertilizante gerado pelo biodigestor, pretendemos
-          utilizar para um projeto com uma iniciação à agricultura, onde o
-          público-alvo será as crianças da escola, que utilizarão este líquido
-          fertilizante como adubo. Isso trará diversos benefícios: Engajará as
-          crianças a serem mais participativas nas atividades extracurriculares,
-          contudo, crianças engajadas, tendem a estudar mais! Levando à uma
-          maior conscientização da população local quanto a preservação do meio
-          ambiente.
+          O líquido fertilizante gerado
+          pelo biodigestor será utilizado
+          como adubo para realizar
+          atividades extracurriculares de
+          iniciação à agricultura para os
+          alunos da escola.
         </Typography>
       </Grid>
     </Grid>
