@@ -40,7 +40,7 @@ const menuItems = [
     Component: PossibleImprovements,
   },
   {
-    text: 'Conclusion',
+    text: 'Conclusão',
     id: 'conclusion',
     Component: Conclusion,
   },
