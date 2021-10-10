@@ -1,6 +1,6 @@
 import React from 'react';
 import { BasicSectionTemplate } from 'src/templates';
-import { Grid, Typography, Image, Divider, Box } from 'src/components';
+import { Grid, Typography, Image, Divider, Box, ComponentImage } from 'src/components';
 import EcoImage from 'public/images/eco.svg';
 import Biodigestor2 from 'public/images/biodigestor2.jpg';
 import CarbonCredit from 'public/images/carbon-credit.png';
@@ -59,40 +59,40 @@ const OurSolution: React.FC<SectionProps> = ({ id, title }) => (
       </Box>
       <Grid container spacing={5}>
         <Grid item xs={6} md={4}>
-          <Image src={BiodigestorComponent} />
+          <ComponentImage src={BiodigestorComponent} hoverSrc={Component1} />
           <Typography align="justify">
             Responsável por realizar o processo de biodigestão da matéria
             orgânica, onde será gerado o gás metano.
           </Typography>
         </Grid>
         <Grid item xs={6} md={4}>
-          <Image src={Component1} />
+          <ComponentImage src={Component1} hoverSrc={Component1} />
           <Typography align="justify">
             Filtro de Iodo, responsável por realizar limpeza do gás e retirar os
             odores presentes nele
           </Typography>
         </Grid>
         <Grid item xs={6} md={4}>
-          <Image src={Component2} />
+          <ComponentImage src={Component2} hoverSrc={Component1} />
           <Typography align="justify">
             Dispositivo de segurança mecânica responsável em regular a pressão
             máxima no sistema.
           </Typography>
         </Grid>
         <Grid item xs={6} md={4}>
-          <Image src={Component3} />
+          <ComponentImage src={Component3} hoverSrc={Component1} />
           <Typography align="justify">
             Sensor responsável por verificar a pressão dentro do sistema
           </Typography>
         </Grid>
         <Grid item xs={6} md={4}>
-          <Image src={Component4} />
+          <ComponentImage src={Component4} hoverSrc={Component1} />
           <Typography align="justify">
             Responsável pela liberação e fechamento do fluxo de gás no sistema
           </Typography>
         </Grid>
         <Grid item xs={6} md={4}>
-          <Image src={Component5} />
+          <ComponentImage src={Component5} hoverSrc={Component1} />
           <Typography align="justify">
             Utilizada para gerar um curto-circuito controlado, que será
             responsável em ascender a chama
