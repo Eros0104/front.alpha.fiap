@@ -1,7 +1,7 @@
 import React from 'react';
 import { BasicSectionTemplate } from 'src/templates';
 import { Grid, Typography, Image } from 'src/components';
-import Topology from 'public/images/topology.png';
+import Topology from 'public/images/topology.jpeg';
 import { SectionProps } from '../section';
 
 const PossibleImprovements: React.FC<SectionProps> = ({ title, id }) => (

@@ -68,7 +68,7 @@ const OurSolution: React.FC<SectionProps> = ({ id, title }) => (
         <Grid item xs={6} md={4}>
           <Image src={Component1} />
           <Typography align="justify">
-            Filtro de iodo, responsável por realizar limpeza do gás e retirar os
+            Filtro de Iodo, responsável por realizar limpeza do gás e retirar os
             odores presentes nele
           </Typography>
         </Grid>
